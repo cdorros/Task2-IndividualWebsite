@@ -1,5 +1,5 @@
-# Ruby on Rails Tutorial: sample application
+Task 2 - Individual Website
+Time-tracking app
+Chris Dorros
 
-This is the sample application for
-[*Ruby on Rails Tutorial: Learn Rails by Example*](http://railstutorial.org/)
-by [Michael Hartl](http://michaelhartl.com/).
+Some code from: Ruby on Rails Tutorial: Learn Rails by Example by Michael Hartl.
