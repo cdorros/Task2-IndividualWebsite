@@ -2,6 +2,8 @@
 <html>
   <head>
     <title><%= title %></title>
+      <!-- This javascript include tag must be here to destroy to work  -->
+    <%= javascript_include_tag :defaults %>
     <%= csrf_meta_tag %>
     <%= render 'layouts/stylesheets' %>
   </head>

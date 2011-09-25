@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Date:</b>
+  <%= @work_entry.date %>
+</p>
+
+<p>
+  <b>Task:</b>
+  <%= @work_entry.task %>
+</p>
+
+<p>
+  <b>Time in:</b>
+  <%= @work_entry.time_in %>
+</p>
+
+<p>
+  <b>Time out:</b>
+  <%= @work_entry.time_out %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @work_entry.description %>
+</p>
+
+<p>
+  <b>Iteration:</b>
+  <%= @work_entry.iteration %>
+</p>
+
+<p>
+  <b>User:</b>
+  <%= @work_entry.user_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_work_entry_path(@work_entry) %> |
+<%= link_to 'Back', work_entries_path %>

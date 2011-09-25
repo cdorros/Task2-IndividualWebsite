@@ -1,5 +1,7 @@
 SampleApp::Application.routes.draw do
 
+  resources :work_entries
+
   resources :users
 
 #  resources :users
