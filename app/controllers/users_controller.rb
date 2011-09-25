@@ -14,6 +14,11 @@ class UsersController < ApplicationController
   # GET /users/1.xml
   def show
     @user = User.find(params[:id])
+    
+    #next 2 lines added: - C.Dorros
+    #@work_entries = @user.work_entries.paginate(:page => params[:page])
+    @work_entries = @user.work_entries(:page => params[:page])
+    @title = @user.name
 
     respond_to do |format|
       format.html # show.html.erb

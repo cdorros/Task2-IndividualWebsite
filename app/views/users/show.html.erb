@@ -1,18 +1,29 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
-  <%= @user.name %>
+  <b>Name:</b> <%= @user.name %> <br />
+  <b>ID:</b> <%= @user.id %>
 </p>
 
-<p>
-  <b>ID:</b>
-  <%= @user.id %>
-</p>
+<!-- WORK ENTRIES -->
+<h2>Work Entries</h2>
 
-<!-- Work Entries Table  -->
+<%= link_to 'New Work entry', new_work_entry_path %>
+<br />
+
+  <!-- Work Entries Table  -->
 <% unless @user.work_entries.empty? %>
   <table class="work_entries" summary="Work Entries">
+    <tr>
+      <th>Date</th>
+      <th>Task</th>
+      <th>Time in</th>
+      <th>Time out</th>
+      <th>Hours</th>
+      <th>Description</th>
+      <th>Iteration</th>
+      <th>User</th>
+    </tr>
     <%= render @work_entries %>
   </table>
 <% end %>
