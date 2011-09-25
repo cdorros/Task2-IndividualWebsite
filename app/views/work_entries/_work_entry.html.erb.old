@@ -1,21 +1,18 @@
-<h1>Listing work_entries</h1>
+<tr>
+  <th>Date</th>
+  <th>Task</th>
+  <th>Time in</th>
+  <th>Time out</th>
+  <th>Hours</th>
+  <th>Description</th>
+  <th>Iteration</th>
+  <th>User</th>
+</tr>
 
-<%= link_to 'New Work entry', new_work_entry_path %>
-<br />
-
-<table>
-  <tr>
-    <th>Date</th>
-    <th>Task</th>
-    <th>Time in</th>
-    <th>Time out</th>
-    <th>Description</th>
-    <th>Iteration</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+<!--
+<tr>
+  <td class="task"><%= work_entry.task %></td>
+-->
 
 <% @work_entries.each do |work_entry| %>
   <tr>
@@ -23,6 +20,7 @@
     <td><%= work_entry.task %></td>
     <td><%= work_entry.time_in %></td>
     <td><%= work_entry.time_out %></td>
+    <td>99</td>
     <td><%= work_entry.description %></td>
     <td><%= work_entry.iteration %></td>
     <td><%= work_entry.user_id %></td>
@@ -31,4 +29,3 @@
     <td><%= link_to 'Destroy', work_entry, :confirm => 'Are you sure?', :method => :delete %></td>
   </tr>
 <% end %>
-</table>

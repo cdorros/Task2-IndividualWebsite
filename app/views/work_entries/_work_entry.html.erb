@@ -1,0 +1,13 @@
+<tr>
+  <td><%= work_entry.date %></td>
+  <td><%= work_entry.task %></td>
+  <td><%= work_entry.time_in %></td>
+  <td><%= work_entry.time_out %></td>
+  <td>99</td>
+  <td><%= work_entry.description %></td>
+  <td><%= work_entry.iteration %></td>
+  <td><%= work_entry.user_id %></td>
+  <td><%= link_to 'Show', work_entry %></td>
+  <td><%= link_to 'Edit', edit_work_entry_path(work_entry) %></td>
+  <td><%= link_to 'Destroy', work_entry, :confirm => 'Are you sure?', :method => :delete %></td>
+</tr>
