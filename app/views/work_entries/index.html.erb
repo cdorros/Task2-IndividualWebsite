@@ -5,10 +5,10 @@
 
 <table>
   <tr>
-    <th>Date</th>
     <th>Task</th>
-    <th>Time in</th>
-    <th>Time out</th>
+    <th>Start</th>
+    <th>End</th>
+    <th>Hours</th>
     <th>Description</th>
     <th>Iteration</th>
     <th>User</th>
@@ -19,10 +19,10 @@
 
 <% @work_entries.each do |work_entry| %>
   <tr>
-    <td><%= work_entry.date %></td>
     <td><%= work_entry.task %></td>
-    <td><%= work_entry.time_in %></td>
-    <td><%= work_entry.time_out %></td>
+    <td><%= work_entry.start %></td>
+    <td><%= work_entry.end %></td>
+    <td>99</td>
     <td><%= work_entry.description %></td>
     <td><%= work_entry.iteration %></td>
     <td><%= work_entry.user_id %></td>
