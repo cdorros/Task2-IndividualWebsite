@@ -10,5 +10,14 @@
   <%= @user.id %>
 </p>
 
+<!-- Work Entries Table  -->
+<% unless @user.work_entries.empty? %>
+  <table class="work_entries" summary="Work Entries">
+    <%= render @work_entries %>
+  </table>
+<% end %>
+
 <%= link_to 'Edit', edit_user_path(@user) %> |
 <%= link_to 'Back', users_path %>
+
+
