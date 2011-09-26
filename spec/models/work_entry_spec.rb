@@ -5,9 +5,8 @@ describe WorkEntry do
     @user = User.create(:name => "Bobby Joe")
     @attr =
     {
-      :date => "January 1st 2030",
+      :start => "January 1st 2030 11:22",
       :task => "Test task",
-      :time_in => '12:30pm',
       :iteration => '1'
     }
   end

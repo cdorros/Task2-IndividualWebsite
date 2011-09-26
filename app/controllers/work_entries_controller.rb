@@ -1,4 +1,6 @@
 class WorkEntriesController < ApplicationController
+
+#AUTO GENERATED METHODS:
   # GET /work_entries
   # GET /work_entries.xml
   def index
