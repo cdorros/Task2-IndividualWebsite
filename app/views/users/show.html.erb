@@ -1,12 +1,8 @@
 <p id="notice"><%= notice %></p>
 
-<p>
-  <b>Name:</b> <%= @user.name %> <br />
-  <b>ID:</b> <%= @user.id %>
-</p>
-
 <!-- WORK ENTRIES -->
 <h2>Work Entries</h2>
+<p><b>for user: <%= @user.name %> (id=<%= @user.id %>)</b></p>
 
 <%= link_to 'New Work entry', new_work_entry_path %>
 <br />
