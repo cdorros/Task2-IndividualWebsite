@@ -1,14 +1,20 @@
 <p id="notice"><%= notice %></p>
 
-<!-- WORK ENTRIES -->
-<h2>Work Entries</h2>
-<p><b>for user: <%= @user.name %> (id=<%= @user.id %>)</b></p>
+<% if @user.work_entries.empty? %>
+  User "<%= @user.name %>" (id=<%= @user.id %>) has no Work Entries. Get to work! <br />
+<% end %>
 
-<%= link_to 'New Work entry', new_work_entry_path %>
-<br />
+
+
+<% unless @user.work_entries.empty? %>
+  <!-- WORK ENTRIES -->
+  <h2>Work Entries</h2>
+  <p><b>for user: <%= @user.name %> (id=<%= @user.id %>)</b></p>
+
+  <%= link_to 'New Work entry', new_work_entry_path %>
+  <br />
 
   <!-- Work Entries Table  -->
-<% unless @user.work_entries.empty? %>
   <table class="work_entries" summary="Work Entries">
     <tr>
       <th>Task</th>
