@@ -23,11 +23,11 @@ ActiveRecord::Schema.define(:version => 20111031042121) do
     t.string   "task"
     t.text     "description"
     t.integer  "iteration"
+    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "start"
     t.datetime "end"
-    t.string   "user_id"
   end
 
 end

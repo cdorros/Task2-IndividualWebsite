@@ -1,10 +1,7 @@
 SampleApp::Application.routes.draw do
 
   resources :work_entries
-
   resources :users
-
-#  resources :users
 
 #  get "pages/home"
 #  get "pages/about"
@@ -12,7 +9,6 @@ SampleApp::Application.routes.draw do
   match '/about', :to => 'pages#about'
   match '/wow', :to => 'pages#wow'
 
-  
   root :to => 'pages#home'
 #  root_path => '/'
 #  root_url => 'http://localhost:3000'
