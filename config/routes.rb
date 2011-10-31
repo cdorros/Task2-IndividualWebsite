@@ -10,6 +10,8 @@ SampleApp::Application.routes.draw do
 #  get "pages/about"
 
   match '/about', :to => 'pages#about'
+  match '/wow', :to => 'pages#wow'
+
   
   root :to => 'pages#home'
 #  root_path => '/'
