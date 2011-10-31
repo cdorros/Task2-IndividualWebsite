@@ -1,15 +1,5 @@
-<%= form_for(@work_entry) do |f| %>
-  <% if @work_entry.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@work_entry.errors.count, "error") %> prohibited this work_entry from being saved:</h2>
+<%= form_for :work_entry, :remote=>true do |f| %>
 
-      <ul>
-      <% @work_entry.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div class="field">
     <%= f.label :task %><br />
@@ -25,7 +15,7 @@
   </div>
   <div class="field">
     <%= f.label :description %><br />
-    <%= f.text_area :description %>
+    <%= f.text_field :description %>
   </div>
   <div class="field">
     <%= f.label :iteration %><br />
@@ -33,8 +23,7 @@
   </div>
   <div class="field">
     <%= f.label :user_id %><br />
-    <%= f.text_field :user_id %>
-  </div>
+    <%= f.select :user_id, User.all.collect {|user| [ user.user_name, user.id ]},:include_blank => false %>  </div>
   <div class="actions">
     <%= f.submit %>
   </div>

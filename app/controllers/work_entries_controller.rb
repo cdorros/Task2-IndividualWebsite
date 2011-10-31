@@ -48,6 +48,7 @@ class WorkEntriesController < ApplicationController
       if @work_entry.save
         format.html { redirect_to(@work_entry, :notice => 'Work entry was successfully created.') }
         format.xml  { render :xml => @work_entry, :status => :created, :location => @work_entry }
+        format.js
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @work_entry.errors, :status => :unprocessable_entity }

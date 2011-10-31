@@ -1,0 +1,32 @@
+<table>
+  <tr>
+    <th>Task</th>
+    <th>Hours</th>
+    <th>Iteration</th>
+    <th>User</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+</table>
+
+<table>
+<!-- New rows go here -->
+<div id="newrow">
+</div>
+
+
+
+<% @work_entries.each do |work_entry| %>
+  <tr>
+    <td><%= work_entry.task %></td>
+
+    <td><%= work_entry.hours %></td>
+    <td><%= work_entry.iteration %></td>
+    <td><%= User.find(work_entry.user_id).name %></td>
+    <td><%= link_to 'Show', work_entry %></td>
+    <td><%= link_to 'Edit', edit_work_entry_path(work_entry) %></td>
+    <td><%= link_to 'Destroy', work_entry, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>

@@ -10,25 +10,24 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110925224052) do
+ActiveRecord::Schema.define(:version => 20111031042121) do
 
   create_table "users", :force => true do |t|
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "name"
+    t.string   "user_name"
   end
 
   create_table "work_entries", :force => true do |t|
     t.string   "task"
     t.text     "description"
     t.integer  "iteration"
-    t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.datetime "start"
     t.datetime "end"
+    t.string   "user_id"
   end
-
-  add_index "work_entries", ["user_id"], :name => "index_work_entries_on_user_id_and_date_and_time_out"
 
 end

@@ -2,35 +2,9 @@
 
 <p>The following is a list of work entries for all users:</p>
 
-<%= link_to 'New Work Entry', new_work_entry_path %>
+<%= render 'form' %>
 <br />
 
-<table>
-  <tr>
-    <th>Task</th>
-    <th>Start</th>
-    <th>End</th>
-    <th>Hours</th>
-    <th>Description</th>
-    <th>Iteration</th>
-    <th>User</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-
-<% @work_entries.each do |work_entry| %>
-  <tr>
-    <td><%= work_entry.task %></td>
-    <td><%= work_entry.start %></td>
-    <td><%= work_entry.end %></td>
-    <td><%= work_entry.hours %></td>
-    <td><%= work_entry.description %></td>
-    <td><%= work_entry.iteration %></td>
-    <td><%= work_entry.user_id %></td>
-    <td><%= link_to 'Show', work_entry %></td>
-    <td><%= link_to 'Edit', edit_work_entry_path(work_entry) %></td>
-    <td><%= link_to 'Destroy', work_entry, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-</table>
+<div id="work_entries">
+<%= render 'work_entry_list' %>
+</div>

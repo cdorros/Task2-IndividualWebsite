@@ -11,17 +11,11 @@
   <h2>Work Entries</h2>
   <p><b>for user: <%= @user.name %> (id=<%= @user.id %>)</b></p>
 
-  <%= link_to 'New Work entry', new_work_entry_path %>
-  <br />
-
   <!-- Work Entries Table  -->
   <table class="work_entries" summary="Work Entries">
     <tr>
       <th>Task</th>
-      <th>Start</th>
-      <th>End</th>
       <th>Hours</th>
-      <th>Description</th>
       <th>Iteration</th>
       <th>User</th>
     </tr>

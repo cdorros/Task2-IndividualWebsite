@@ -1,11 +1,8 @@
 <tr>
   <td><%= work_entry.task  %></td>
-  <td><%= work_entry.start %></td>
-  <td><%= work_entry.end %></td>
   <td><%= work_entry.hours %></td>
-  <td><%= work_entry.description %></td>
   <td><%= work_entry.iteration %></td>
-  <td><%= work_entry.user_id %></td>
+  <td><%= User.find(work_entry.user_id).name %></td>
   <td><%= link_to 'Show', work_entry %></td>
   <td><%= link_to 'Edit', edit_work_entry_path(work_entry) %></td>
   <td><%= link_to 'Destroy', work_entry, :confirm => 'Are you sure?', :method => :delete %></td>
